@@ -29,6 +29,14 @@ mod run . --recipe CommonStaticAnalysis
 mod study . --last-recipe-run --data-table SourcesFileResults
 ```
 
+## Java 17
+
+```bash
+mod config recipes jar install org.openrewrite.recipe:rewrite-migrate-java:LATEST
+mod run . --recipe UpgradeToJava17
+mod study . --last-recipe-run --data-table SourcesFileResults
+```
+
 ## Publishing our workshop repository to your Maven local
 
 One of these two depending on whether you chose Maven or Gradle:
