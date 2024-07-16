@@ -16,8 +16,7 @@ plugins {
     id("org.openrewrite.rewrite") version "latest.release"
 }
 
-// Set as appropriate for your organization
-group = "com.yourorg"
+group = "com.jkschneider"
 description = "Rewrite recipes."
 
 dependencies {
@@ -25,6 +24,7 @@ dependencies {
     // https://github.com/openrewrite/rewrite-recipe-bom/releases
     implementation(platform("org.openrewrite.recipe:rewrite-recipe-bom:latest.release"))
 
+    implementation("org.openrewrite:rewrite-maven")
     implementation("org.openrewrite:rewrite-java")
     implementation("org.openrewrite.recipe:rewrite-java-dependencies")
     implementation("org.openrewrite:rewrite-yaml")
