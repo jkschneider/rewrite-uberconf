@@ -8,10 +8,10 @@ mod config license edit MXxjb21tdW5pdHl8MjAyNDA3MzE=.TRlIyTpiouUR0K4Ek/e1yENTEnk
 
 ## Setting up repos to ingest
 
-Producing a repos.csv.
+Producing a repos.csv. Replace `finos` with your GitHub org name.
 
 ```bash
-gh repo list finos --json url,defaultBranchRef,diskUsage --template '{{"cloneUrl,branch\n"}}{{range .}}{{.url}}{{","}}{{.defaultBranchRef.name}}{{"\n"}}{{end}}' > repos.csv
+gh repo list finos --limit 1000 --json url,defaultBranchRef,diskUsage --template '{{"cloneUrl,branch\n"}}{{range .}}{{.url}}{{","}}{{.defaultBranchRef.name}}{{"\n"}}{{end}}' > repos.csv
 ```
 Then you can then use:
 
