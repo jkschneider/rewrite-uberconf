@@ -28,3 +28,20 @@ mod config recipes jar install org.openrewrite.recipe:rewrite-static-analysis:LA
 mod run . --recipe CommonStaticAnalysis
 mod study . --last-recipe-run --data-table SourcesFileResults
 ```
+
+## Publishing our workshop repository to your Maven local
+
+One of these two depending on whether you chose Maven or Gradle:
+
+```bash
+./gradlew pTML
+./mvnw install
+```
+
+Then (use the group id and artifact id you chose for your project):
+
+```bash
+mod config recipes jar install com.jkschneider:rewrite-uberconf:LATEST
+mod run . --recipe ProjectRelationships -P "groupId=com.google*"
+mod study . --last-recipe-run --data-table ProjectDependencyRelationships
+```
