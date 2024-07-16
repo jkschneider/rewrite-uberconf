@@ -16,7 +16,7 @@ gh repo list finos --json url,defaultBranchRef,diskUsage --template '{{"cloneUrl
 Then you can then use:
 
 ```bash
-mod git clone csv repos.csv --filter=tree:0
+mod git clone csv . repos.csv --filter=tree:0
 ```
 
 https://bit.ly/UberConfIDEplugin
@@ -41,7 +41,7 @@ One of these two depending on whether you chose Maven or Gradle:
 Then (use the group id and artifact id you chose for your project):
 
 ```bash
-mod config recipes jar install com.jkschneider:rewrite-uberconf:LATEST
+mod config recipes jar install com.jkschneider:rewrite-uberconf:0.1.0-SNAPSHOT
 mod run . --recipe ProjectRelationships -P "groupId=com.google*"
 mod study . --last-recipe-run --data-table ProjectDependencyRelationships
 ```
