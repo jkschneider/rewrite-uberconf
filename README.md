@@ -2,8 +2,11 @@
 
 ## Setting license
 
+jkschneider/rewrite-uberconf
+
 ```bash
 mod config license edit MXxjb21tdW5pdHl8MjAyNDA3MzE=.TRlIyTpiouUR0K4Ek/e1yENTEnkUVAxFJZBjtf3rdtUR8xlZJpU1WFmms72BdpduAgID2Ge3v1furXZ/H+DiAA==
+mod build .
 ```
 
 ## Setting up repos to ingest
